@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在线评教系统登录</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="../static/web_student_evaluation/css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="info">
+        <h1>在线评教系统</h1>
+    </div>
+</div>
+<div class="form">
+    <div class="thumbnail"><img src="../static/web_student_evaluation/css/hat.svg"/></div>
+    <form class="register-form" action="/student/reg" method="post">
+        <input type="text" placeholder="账号" name="stu_num"/>
+        <input type="password" placeholder="密码" name="stu_psd"/>
+        <input type="text" placeholder="邮箱" name="stu_email"/>
+        <button type="submit">注册</button>
+        <p class="message">已有账户? <a href="#">登录</a></p>
+    </form>
+    <form class="login-form" action="/student/login" method="post">
+        <input type="text" placeholder="账号" name="stu_num"/>
+        <input type="password" placeholder="密码" name="stu_psd"/>
+        <button type="submit">登录</button>
+      <span class="message">没有账户? <a href="#">立即注册</a></span>&nbsp;&nbsp<span class="message" id="rp"></span>
+    </form>
+</div>
+<script src='../static/web_student_evaluation/js/jquery.min.js'></script>
+<script src="../static/web_student_evaluation/js/index.js"></script>
+</body>
+</html>
